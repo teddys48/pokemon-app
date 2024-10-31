@@ -10,15 +10,17 @@ const Modal = ({ status, name, children, closeModal, data }) => {
             : "hidden"
         }
       >
-        <div className="flex w-full h-full items-baseline justify-center py-32 px-5">
-          <div className="flex space-y-5 flex-col w-full h-auto max-w-full border-2 px-2 rounded-md bg-white overflow-auto">
-            <span className="flex w-full max-sm:text-2xl text-4xl font-bold">
-              <span className="flex w-full justify-start">{name}</span>
-              <span className="flex w-full justify-end">
+        <div className="flex w-full h-full items-baseline max-h-full overflow-auto justify-center pt-10 pb-20 px-5">
+          <div className="flex space-y-5 flex-col w-full max-h-full max-w-full border-2 px-2 rounded-md bg-white overflow-auto">
+            <span className="flex w-full ">
+              <span className="flex w-full max-sm:text-2xl items-center text-4xl font-bold justify-center">
+                {name}
+              </span>
+              <span className="flex font-bold text-xl justify-end">
                 <button onClick={closeModal}>x</button>
               </span>
             </span>
-            <div className="flex">
+            <div className="flex w-full max-w-full max-h-full overflow-auto">
               {Children.map(children, (child) => child)}
             </div>
             <div className="flex w-full justify-end">

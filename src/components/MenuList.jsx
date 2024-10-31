@@ -13,6 +13,11 @@ const Menu = [
     name: "Contest",
     icon: "fa fa-cogs",
   },
+  {
+    link: "/items",
+    name: "Items",
+    icon: "fa fa-cogs",
+  },
 ];
 
 export { Menu };
